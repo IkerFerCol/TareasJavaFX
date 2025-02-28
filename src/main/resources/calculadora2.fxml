@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.Calculadora2Controller">
+
+    <Label text="Operando 1"/>
+    <TextField fx:id="txtNum1"/>
+
+    <Label text="Operando 2"/>
+    <TextField fx:id="txtNum2"/>
+
+    <Button text="Operar" onAction="#operar"/>
+
+    <RadioButton text="Suma" fx:id="rbSuma"/>
+    <RadioButton text="Resta" fx:id="rbResta"/>
+    <RadioButton text="Multiplicación" fx:id="rbMultiplicacion"/>
+    <RadioButton text="División" fx:id="rbDivision"/>
+
+    <Label text="Resultado"/>
+    <TextField fx:id="txtResultado" editable="false"/>
+</VBox>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.Gestion4Controller">
+
+    <HBox spacing="10">
+        <VBox spacing="10">
+            <Label text="Nombre"/>
+            <TextField fx:id="txtNombre"/>
+
+            <Label text="Apellidos"/>
+            <TextField fx:id="txtApellidos"/>
+
+            <Label text="Edad"/>
+            <TextField fx:id="txtEdad"/>
+
+            <Button text="Agregar persona" onAction="#agregarPersona"/>
+        </VBox>
+
+        <VBox spacing="10">
+            <TableView fx:id="tablaPersonas">
+                <columns>
+                    <TableColumn fx:id="columnaNombre" text="Nombre" prefWidth="100"/>
+                    <TableColumn fx:id="columnaApellidos" text="Apellidos" prefWidth="100"/>
+                    <TableColumn fx:id="columnaEdad" text="Edad" prefWidth="50"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10">
+                <Button fx:id="btnModificar" text="Modificar" onAction="#modificarPersona" disable="true"/>
+                <Button fx:id="btnEliminar" text="Eliminar" onAction="#eliminarPersona" disable="true"/>
+            </HBox>
+        </VBox>
+    </HBox>
+
+</VBox>

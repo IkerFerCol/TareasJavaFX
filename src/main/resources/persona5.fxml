@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.Gestion5Controller" hgap="10" vgap="10" alignment="CENTER">
+
+    <!-- Tabla de Personas -->
+    <TableView fx:id="tablaPersonas" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="3">
+        <columns>
+            <TableColumn fx:id="columnaNombre" text="Nombre"/>
+            <TableColumn fx:id="columnaApellidos" text="Apellidos"/>
+            <TableColumn fx:id="columnaEdad" text="Edad"/>
+        </columns>
+    </TableView>
+
+    <!-- Contenedor para los botones con espacio entre ellos -->
+    <HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="3" alignment="CENTER">
+        <Button fx:id="btnAgregar" text="Agregar persona" onAction="#abrirVentanaAgregar"/>
+        <Button fx:id="btnModificar" text="Modificar" onAction="#modificarPersona"/>
+        <Button fx:id="btnEliminar" text="Eliminar" onAction="#eliminarPersona"/>
+    </HBox>
+
+</GridPane>
